@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +28,14 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+Route::get('/posts', [PostController::class,'create' ])->name('posts.create');
+
+/*Route::resource('/', PostController::class)->names([
+    'index' => 'posts.index',
+    'create' => 'posts.create',
+    'store' => 'posts.store',
+    'show' => 'posts.show',
+  ]); */
 
 Route::get('/about',function(){
     return view('about');
