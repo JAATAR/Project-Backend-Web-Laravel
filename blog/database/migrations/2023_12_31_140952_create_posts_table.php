@@ -17,6 +17,10 @@ return new class extends Migration
             $table->string('title')->nullable();
     $table->text('description')->nullable();
     $table->string('image')->nullable();
+    $table->string('name')->nullable();
+    $table->string('user_id')->nullable();
+            $table->string('post_status')->nullable();
+            $table->string('usertype')->nullable();
     $table->date('publishing_date')->nullable();
         });
     }
