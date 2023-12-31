@@ -12,13 +12,15 @@
     <title>Clean Blog</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{asset ('css blades/bootstrap.blade.css')}}" rel="stylesheet">
+    <link href="{{asset ('css blades/bootstrap.min.blade.css')}}" rel="stylesheet">
 
     <!-- Theme CSS -->
-    <link href="css/clean-blog.min.css" rel="stylesheet">
+    <link href="{{asset ('css blades/clean-blog.blade.css')}}" rel="stylesheet">
+    <link href="{{asset ('css blades/clean-blog.min.blade.css')}}" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="{{asset ('css blades/font-awesome.blades.css')}}" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
@@ -49,16 +51,16 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="index.html">Home</a>
+                        <a href="#">Home</a>
                     </li>
                     <li>
-                        <a href="about.html">About</a>
+                        <a href="#"">About</a>
                     </li>
                     <li>
-                        <a href="post.html">Sample Post</a>
+                        <a href="#">Sample Post</a>
                     </li>
                     <li>
-                        <a href="contact.html">Contact</a>
+                        <a href="#">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -69,7 +71,7 @@
 
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-    <header class="intro-header" style="background-image: url('img/home-bg.jpg')">
+    <header class="intro-header" style="background-image: {{url('img blades/home-bg.jpg')}}">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -182,17 +184,18 @@
     </footer>
 
     <!-- jQuery -->
-    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="{{asset ( 'js blades/jquery.min.blade.js')}}"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="{{asset ('js blades/bootstrap.min.blade.js')}}"></script>
 
     <!-- Contact Form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
+    <script src="{{asset ('js blades/jqBootstrapValidation.blade.js')}}"></script>
+    <script src="{{asset ('js blades/contact_me.blade.js')}}"></script>
+    <script src="{{asset('js blades/clean-blog.blade.js')}}"></script>
 
     <!-- Theme JavaScript -->
-    <script src="js/clean-blog.min.js"></script>
+    <script src="{{ asset ('js blades/clean-blog.min.blade.js')}}"></script>
 
 </body>
 

@@ -74,20 +74,20 @@ hr.small {
     border-bottom: 1px solid transparent;
   }
   .navbar-custom .navbar-brand {
-    color: white;
+
     padding: 20px;
   }
   .navbar-custom .navbar-brand:hover,
   .navbar-custom .navbar-brand:focus {
-    color: rgba(255, 255, 255, 0.8);
+
   }
   .navbar-custom .nav li a {
-    color: white;
+
     padding: 20px;
   }
   .navbar-custom .nav li a:hover,
   .navbar-custom .nav li a:focus {
-    color: rgba(255, 255, 255, 0.8);
+
   }
   .navbar-custom .nav li ul.dropdown-menu a {
     color: #333333;
@@ -115,7 +115,7 @@ hr.small {
     /* when the user scrolls down, we hide the header right above the viewport */
     position: fixed;
     top: -61px;
-    background-color: rgba(255, 255, 255, 0.9);
+
     border-bottom: 1px solid #f2f2f2;
     -webkit-transition: -webkit-transform 0.3s;
     -moz-transition: -moz-transform 0.3s;
@@ -158,7 +158,7 @@ hr.small {
 .intro-header .post-heading,
 .intro-header .page-heading {
   padding: 100px 0 50px;
-  color: white;
+
 }
 @media only screen and (min-width: 768px) {
   .intro-header .site-heading,
@@ -212,7 +212,7 @@ hr.small {
   font-size: 20px;
 }
 .intro-header .post-heading .meta a {
-  color: white;
+
 }
 @media only screen and (min-width: 768px) {
   .intro-header .post-heading h1 {
