@@ -63,7 +63,7 @@
                         <a href="{{url('/')}}">Home</a>
                     </li>
                     <li>
-                        <a href="{{url('about')}}"">About</a>
+                        <a href="{{url('/about')}}"">About</a>
                     </li>
                     <li>
                         <a href="#">Sample Post</a>
@@ -175,42 +175,43 @@
 
     <hr>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <ul class="list-inline text-center">
-                        <li>
-                            <a href="#">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
-                    <p class="copyright text-muted">Copyright &copy; Your Website 2016</p>
-                </div>
+ <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 mb-4 text-center"> <!-- Added "text-center" class here -->
+                <a href="https://twitter.com/blogcleaning">
+                    <img src="{{asset('img blades/twitter.png')}}" class="img-fluid" alt="" width="50" height="50">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+
+                <a href="https://www.facebook.com/profile.php?id=100068174195429&locale=ms_MY&paipv=0&eav=AfafHi3uXC25FX5LIS1u0sw4SEZctp6KFhkZhWXsSW5Naguyg8sAeAaPoCfvNqkJJmU&_rdr"">
+                    <img src="{{asset('img blades/facebook.png')}}" class="img-fluid" alt="" width="50" height="50">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+
+                <a href="https://github.com/JAATAR/Project-Backend-Web-Laravel">
+                    <img src="{{asset('img blades/github.png')}}" class="img-fluid" alt="" width="50" height="50">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
             </div>
         </div>
-    </footer>
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <p class="copyright text-muted">Copyright &copy; Your Website 2016</p>
+            </div>
+        </div>
+    </div>
+</footer>
 
 
 

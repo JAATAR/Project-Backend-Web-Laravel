@@ -46,7 +46,7 @@
                                 <a href="{{url('/')}}">Home</a>
                             </li>
                             <li>
-                                <a href="{{url('about')}}"">About</a>
+                                <a href="{{url('/about')}}"">About</a>
                             </li>
                             <li>
                                 <a href="#">Sample Post</a>
