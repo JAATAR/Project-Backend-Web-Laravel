@@ -21,7 +21,7 @@ return new class extends Migration
     $table->string('user_id')->nullable();
             $table->string('post_status')->nullable();
             $table->string('usertype')->nullable();
-    $table->date('publishing_date')->nullable();
+
         });
     }
 

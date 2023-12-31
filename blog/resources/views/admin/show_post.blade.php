@@ -120,7 +120,7 @@
     <td>{{$post->post_status}}</td>
     <td>{{$post->usertype}}</td>
     <td>
-        <img class="img_deg" src="postimage/{{$post->image}}" >
+
     </td>
 
     <td>

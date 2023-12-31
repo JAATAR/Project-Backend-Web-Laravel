@@ -66,7 +66,10 @@
                         <a href="{{url('/about')}}"">About</a>
                     </li>
                     <li>
-                        <a href="{{url('/posts')}}">Sample Post</a>
+                        <a href="{{url('post_page')}}">Add Post</a>
+                    </li>
+                    <li>
+                        <a href="{{url('/show_post')}}">Show Post</a>
                     </li>
                     <li>
                         <a href="#">Contact</a>

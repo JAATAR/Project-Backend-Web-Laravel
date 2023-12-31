@@ -117,9 +117,9 @@
             </div>
 
             <div class="form-group field_deg">
-                <a href="{{route('posts.show')}}">
+
                     <input type="submit" value="Add Post" class="btn btn-outline-secondary">
-                </a>
+
             </div>
 
         </form>

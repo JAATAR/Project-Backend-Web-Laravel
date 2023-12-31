@@ -15,7 +15,7 @@ class AdminController extends Controller
     public function add_post(request $request)
     {
 $user=Auth()->user();
-$user_id =$user->id;
+$user_id = optional($user)->id;
 
     $name =$user->name;
 
@@ -36,6 +36,17 @@ $user_id =$user->id;
     $post->usertype = $usertype;
 
     $image =$request->image;
+
+
+    if ($user) {
+        $user_id = $user->id;
+        $name = $user->name;
+        $usertype = $user->usertype;
+    }
+    else
+    {
+        return redirect()->back()->with('error', 'User not authenticated');
+    }
 
     if($image)
     {
