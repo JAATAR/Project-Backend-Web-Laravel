@@ -65,11 +65,9 @@
                     <li>
                         <a href="{{url('/about')}}"">About</a>
                     </li>
+
                     <li>
-                        <a href="{{url('post_page')}}">Add Post</a>
-                    </li>
-                    <li>
-                        <a href="{{url('/show_post')}}">Show Post</a>
+                        <a href="{{url('/posts/create')}}">Recent Posts</a>
                     </li>
                     <li>
                         <a href="{{url('/contacts')}}">Contact</a>
@@ -171,7 +169,7 @@
                 <!-- Pager -->
                 <ul class="pager">
                     <li class="next">
-                        <a href="{{url('/show_post')}}">Older Posts &rarr;</a>
+                        <a href="{{url('')}}">Older Posts &rarr;</a>
                     </li>
                 </ul>
             </div>

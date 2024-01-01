@@ -3,9 +3,10 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
-use App\Http\Controllers\AdminController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\FaqController;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,6 +33,8 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+/*
+
 Route::get('post', [PostController::class,'post'])->
 middleware([ 'auth','admin']);
 
@@ -53,9 +56,36 @@ Route::get('/edit_page/{id}', [AdminController::class,'edit_page']);
 
 Route::post('/update_post/{id}', [AdminController::class,'update_post']);
 
+*/
+
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+Route::post('/dashboard/search', [DashboardController::class, 'search'])->name('dashboard.search');
+Route::get('/profile/{user}', [DashboardController::class, 'showProfile'])->name('profile.profile');
+
 Route::get('/contacts', [ContactController::class, 'create'])->name('contacts.contact-us');
 
 Route::post('/contacts', [ContactController::class, 'store'])->name('contacts.store');
+
+
+
+Route::middleware(['auth','admin'])->group(function(){
+
+ //create post
+ Route::get('/posts/create', [PostController::class, 'showPostForm'])->name('posts.create');
+ Route::get('/posts', [PostController::class, 'store'])->name('posts.store');
+
+ //edit post
+ Route::get('/posts/{post}/edit', [PostController::class, 'editPost'])->name('posts.edit-post');
+ Route::put('/posts/{post}', [PostController::class, 'updatePost'])->name('posts.update');
+
+ //delete post
+ Route::delete('post/{post}', [PostController::class, 'deletePost'])->name('posts.delete');
+
+ //promote user to admin
+ Route::post('/users/{user}/promote', [UserController::class, 'promoteUser'])->name('users.promote');
+
+
+});
 
 
 
