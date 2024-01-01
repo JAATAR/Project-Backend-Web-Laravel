@@ -103,23 +103,23 @@
          <!-- /.container -->
      </nav>
 
-     <!-- Page Header -->
-     <!-- Set your background image for this header on the line below. -->
-     <header class="intro-header" style="background-image: url('{{asset('img blades/password-blog.jpg')}}')">
-         <div class="container">
-             <div class="row">
-                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                     <div class="site-heading">
-                         <h1>Cleaning Blog</h1>
+      <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-image: url('{{asset('img blades/home-bg.jpg')}}')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
 
-                         <hr class="small">
-                         <span class="subheading">A Clean Blog Theme by Start Bootstrap</span>
-                     </div>
-                 </div>
-             </div>
-         </div>
-     </header>
+                        <h1>Cosmic Chronicle</h1>
 
+                        <hr class="small">
+                        <span class="subheading">"Your Daily Dose of Inspiration and Information"</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
      <!--Forgot password-->
      <main class="text-center">
 
@@ -180,11 +180,12 @@
         </div>
         <div class="row">
             <div class="col-lg-12 text-center">
-                <p class="copyright text-muted">Copyright &copy; Cleaning Blog</p>
+                <p class="copyright text-muted">All 2024 rights reserved &copy; Design by Jaatar Soufian</p>
             </div>
         </div>
     </div>
 </footer>
+
 
 
 

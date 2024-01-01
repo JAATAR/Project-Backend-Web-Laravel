@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>About-Clean Blog</title>
+        <title>About-Cosmic Chronicle</title>
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
@@ -36,7 +36,7 @@
                             <span class="sr-only">Toggle navigation</span>
                             Menu <i class="fa fa-bars"></i>
                         </button>
-                        <a class="navbar-brand" href="{{url('/')}}">Clean Blog</a>
+                        <a class="navbar-brand" href="{{url('/')}}">Cosmic Chronicle</a>
                     </div>
 
                     <!-- Collect the nav links, forms, and other content for toggling -->

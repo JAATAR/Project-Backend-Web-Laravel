@@ -6,7 +6,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Welcome Clean Blog</title>
+        <title>Reset Password Cosmic Chronicle</title>
 
 
 
@@ -103,23 +103,23 @@
         <!-- /.container -->
     </nav>
 
-    <!-- Page Header -->
+     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-    <header class="intro-header"  style="background-image: url('{{asset('img blades/password-blog.jpg')}}')">
+    <header class="intro-header" style="background-image: url('{{asset('img blades/home-bg.jpg')}}')">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="site-heading">
-                        <h1>Cleanig Blog</h1>
+
+                        <h1>Cosmic Chronicle</h1>
 
                         <hr class="small">
-                        <span class="subheading">A Clean Blog Theme by Start Bootstrap</span>
+                        <span class="subheading">"Your Daily Dose of Inspiration and Information"</span>
                     </div>
                 </div>
             </div>
         </div>
     </header>
-
 
 <!--reset Password-->
 <main class="text-center">
@@ -162,44 +162,43 @@
     </form>
 </main>
 
-     <!-- Footer -->
-     <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 mb-4 text-center"> <!-- Added "text-center" class here -->
-                    <a href="https://twitter.com/blogcleaning">
-                        <img src="{{asset('img blades/twitter.png')}}" class="img-fluid" alt="" width="50" height="50">
-                        <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </a>
+      <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 mb-4 text-center"> <!-- Added "text-center" class here -->
+                <a href="https://twitter.com/blogcleaning">
+                    <img src="{{asset('img blades/twitter.png')}}" class="img-fluid" alt="" width="50" height="50">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
 
-                    <a href="https://www.facebook.com/profile.php?id=100068174195429&locale=ms_MY&paipv=0&eav=AfafHi3uXC25FX5LIS1u0sw4SEZctp6KFhkZhWXsSW5Naguyg8sAeAaPoCfvNqkJJmU&_rdr"">
-                        <img src="{{asset('img blades/facebook.png')}}" class="img-fluid" alt="" width="50" height="50">
-                        <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </a>
+                <a href="https://www.facebook.com/profile.php?id=100068174195429&locale=ms_MY&paipv=0&eav=AfafHi3uXC25FX5LIS1u0sw4SEZctp6KFhkZhWXsSW5Naguyg8sAeAaPoCfvNqkJJmU&_rdr"">
+                    <img src="{{asset('img blades/facebook.png')}}" class="img-fluid" alt="" width="50" height="50">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
 
-                    <a href="https://github.com/JAATAR/Project-Backend-Web-Laravel">
-                        <img src="{{asset('img blades/github.png')}}" class="img-fluid" alt="" width="50" height="50">
-                        <span class="fa-stack fa-lg">
-                            <i class="fa fa-circle fa-stack-2x"></i>
-                            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                        </span>
-                    </a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <p class="copyright text-muted">Copyright &copy; Cleaning Blog</p>
-                </div>
+                <a href="https://github.com/JAATAR/Project-Backend-Web-Laravel">
+                    <img src="{{asset('img blades/github.png')}}" class="img-fluid" alt="" width="50" height="50">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
             </div>
         </div>
-    </footer>
-
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <p class="copyright text-muted">All 2024 rights reserved &copy; Design by Jaatar Soufian</p>
+            </div>
+        </div>
+    </div>
+</footer>
 
 
         <!-- jQuery -->

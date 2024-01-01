@@ -234,12 +234,11 @@
         </div>
         <div class="row">
             <div class="col-lg-12 text-center">
-                <p class="copyright text-muted">Copyright &copy; Cleaning Blog</p>
+                <p class="copyright text-muted">All 2024 rights reserved &copy; Design by Jaatar Soufian</p>
             </div>
         </div>
     </div>
 </footer>
-
 
 
     <!-- jQuery -->

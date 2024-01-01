@@ -6,7 +6,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Welcome Clean Blog</title>
+        <title> Verify Email Cosmic Chronicle </title>
 
 
 
@@ -55,7 +55,7 @@
                     <span class="sr-only">Toggle navigation</span>
                     Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="{{url('/')}}">Clean Blog</a>
+                <a class="navbar-brand" href="{{url('/')}}">Cosmic Chronicle</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -103,17 +103,18 @@
         <!-- /.container -->
     </nav>
 
-    <!-- Page Header -->
+     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-    <header class="intro-header" style="background-image: url('{{asset('img blades/email-image.jpg')}}')">
+    <header class="intro-header" style="background-image: url('{{asset('img blades/home-bg.jpg')}}')">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="site-heading">
-                        <h1>Cleanig Blog</h1>
+
+                        <h1>Cosmic Chronicle</h1>
 
                         <hr class="small">
-                        <span class="subheading">A Clean Blog Theme by Start Bootstrap</span>
+                        <span class="subheading">"Your Daily Dose of Inspiration and Information"</span>
                     </div>
                 </div>
             </div>
@@ -188,7 +189,7 @@
         </div>
         <div class="row">
             <div class="col-lg-12 text-center">
-                <p class="copyright text-muted">Copyright &copy; Cleaning Blog</p>
+                <p class="copyright text-muted">All 2024 rights reserved &copy; Design by Jaatar Soufian</p>
             </div>
         </div>
     </div>
