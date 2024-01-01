@@ -70,7 +70,7 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="page-heading">
-                        <h1>About Cleaning Blog</h1>
+                        <h1>About my  Cosmic Chronicle Blog</h1>
                         <hr class="small">
                         <span class="subheading">This is what I do.</span>
                     </div>
@@ -83,51 +83,103 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nostrum ullam eveniet pariatur voluptates odit, fuga atque ea nobis sit soluta odio, adipisci quas excepturi maxime quae totam ducimus consectetur?</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium recusandae illo eaque architecto error, repellendus iusto reprehenderit, doloribus, minus sunt. Numquam at quae voluptatum in officia voluptas voluptatibus, minus!</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum molestiae debitis nobis, quod sapiente qui voluptatum, placeat magni repudiandae accusantium fugit quas labore non rerum possimus, corrupti enim modi! Et.</p>
+                <h3>Introduction</h3>
+                <p>Welkom op mijn backend webproject! Deze website is ontwikkeld als onderdeel van mijn vak, en ik wil graag wat meer informatie met u delen over het project en de gebruikte bronnen. </p>
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <h3>Project bescrhijving</h3>
+                <p>Dit project is gemaakt met als doel om een backend webapplicatie te ontwikkelen. De focus ligt op het implementeren van verschillende functionaliteiten, waarbij Laravel als het belangrijkste framework wordt gebruikt.</p>
+                 <h3>Gebruikte bronnen en hun toepassingen</h3>
+            <p> <h6></h6> 1. [Free CSS - Clean Blog Template] <b>(https://www.free-css.com/free-css-templates/page236/clean-blog)</b>  <br>
+             Deze bron werd gebruikt als het primaire template voor het ontwerp van Cosmic Chronicle. Door gebruik te maken van dit template, kon ik een overzichtelijke en professionele design creëren voor mijn website.</p>
+             <p>2. [Laravel Documentatie] <b>(https://laravel.com/docs/10.x)</b>
+                <br>
+                 De officiële Laravel-documentatie was een onmisbare bron voor het begrijpen van de verschillende Laravel-functionaliteiten en het volgen van best practices tijdens de ontwikkeling van de backend.</p>
+                 <p>
+                    3. [Laravel Starter Kits] <b>(https://laravel.com/docs/10.x/starter-kits)</b>
+   <br> De Laravel Starter Kits hebben als inspiratie gediend bij het opzetten van de basisstructuur van het project en bij het verkennen van aanbevolen architecturen.Ik heb de package <b>Laravel Breeze</b>  gebruikt voor deze website.
+                 </p>
+                <p>4.[Cloudways - Setup Laravel Login Authentication] <b>(https://www.cloudways.com/blog/setup-laravel-login-authentication/)</b>
+                    <br>
+                     Deze bron bood inzichten en stappen voor het opzetten van de login authenticatie in Laravel. Het hielp bij het implementeren van een veilig en betrouwbaar inlogsysteem voor Cosmic Chronicle. </p>
+                  <p>
+                   5. [CubetTech - Laravel: Creating a Simple Login Form] <b> (https://cubettech.com/resources/blog/laravel-creating-a-simple-login-form/)</b>
+                <br> Deze bron heeft me geleid bij het implementeren van een eenvoudig inlogsysteem in Cosmic Chronicle.
+               </p>
+
+               <p>
+                6. [CSS Author - Free Ecommerce Admin Templates] <b>(https://cssauthor.com/free-ecommerce-admin-templates/)</b>
+                <br> Deze bron heeft me geholpen bij het vinden van geschikte templates voor het admin-gedeelte van Cosmic Chronicle.
+
+               </p>
+               <p>
+                7. [Stack Overflow] <b> (https://stackoverflow.com)</b>
+   <br> Stack Overflow is altijd een waardevolle bron voor het oplossen van specifieke technische problemen tijdens de ontwikkeling.
+               </p>
+               <p>
+            8. [YouTube Tutorial - Laravel Playlist] <b> (https://www.youtube.com/watch?v=aw3vA2MCIJg&list=PLm8sgxwSZoffiTghh0cqMj0tGlonrouWX&index=1)</b>
+   <br> De YouTube-afspeellijst heeft me begeleid bij specifieke Laravel-aspecten, zoals het creeren van posts en het linken met de dashboard waardoor ik diepgaandere kennis kon opdoen en de efficiëntie van de ontwikkeling kon vergroten.
+               </p>
+     <p>
+        9. [GitHub - Interschool-VA] <b> (https://github.com/n4wf3l/Interschool-VA)</b>
+        <br> De Interschool-VA GitHub-repository diende als inspiratie voor de implementatie van het contactformulier in Cosmic Chronicle.
+    </p>
+
+    <h3>Mededelingen</h3>
+    <p>
+        Als je terminalcommando's uitvoert, zorg ervoor dat je eerst naar het juiste pad navigeert.Anders zal de code van de website niet runnen.Het juiste pad is <strong>`cd ../Project-Backend-web-Laravel/blog` ,voordat je `php artisan serve` command uitvoert.</strong>  ,voordat je `php artisan serve` command uitvoert.
+    </p>
+<p> Je kunt de broncode van Cosmic Chronicle bekijken op [GitHub] <b>(https://github.com/JAATAR/Project-Backend-Web-Laravel)</b> . Voel u vrij om de repository te verkennen en bij te dragen.</p>
+
+<p>
+    Dankzij deze bronnen en mededelingen kon ik Cosmic Chronicle ontwikkelen met een solide basis, waarbij design, functionaliteit en beveiliging nauwkeurig werden geïntegreerd. Bedankt voor het verkennen van mijn project!
+</p>
+
+
+            </div>
             </div>
         </div>
     </div>
 
     <hr>
 
-      <!-- Footer -->
-      <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <ul class="list-inline text-center">
-                        <li>
-                            <a href="#">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
-                    <p class="copyright text-muted">Copyright &copy; Your Website 2016</p>
-                </div>
+
+ <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 mb-4 text-center"> <!-- Added "text-center" class here -->
+                <a href="https://twitter.com/blogcleaning">
+                    <img src="{{asset('img blades/twitter.png')}}" class="img-fluid" alt="" width="50" height="50">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+
+                <a href="https://www.facebook.com/profile.php?id=100068174195429&locale=ms_MY&paipv=0&eav=AfafHi3uXC25FX5LIS1u0sw4SEZctp6KFhkZhWXsSW5Naguyg8sAeAaPoCfvNqkJJmU&_rdr"">
+                    <img src="{{asset('img blades/facebook.png')}}" class="img-fluid" alt="" width="50" height="50">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+
+                <a href="https://github.com/JAATAR/Project-Backend-Web-Laravel">
+                    <img src="{{asset('img blades/github.png')}}" class="img-fluid" alt="" width="50" height="50">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
             </div>
         </div>
-    </footer>
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <p class="copyright text-muted">All 2024 rights reserved &copy; Design by Jaatar Soufian</p>
+            </div>
+        </div>
+    </div>
+</footer>
 
 
 
@@ -144,6 +196,5 @@
 
     <!-- Theme JavaScript -->
     <script src="{{ asset ('js blades/clean-blog.min.blade.js')}}"></script>
-
-</body>
+ </body>
 </html>
