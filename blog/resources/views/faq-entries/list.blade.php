@@ -72,7 +72,7 @@
                         <a href="{{url('/show_post')}}">Show Post</a>
                     </li>
                     <li>
-                        <a href="{{url('/contacts')}}">Contact</a>
+                        <a href="#">Contact</a>
                     </li>
                     <li>
                         <a href="">FAQ</a>
@@ -102,14 +102,14 @@
     </nav>
 
     <!-- Page Header -->
+    <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-    <header class="intro-header" style="background-image: {{asset('img blades/home-bg.jpg')}}">
+    <header class="intro-header" style="background-image: {{url('img blades/home-bg.jpg')}}">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="site-heading">
                         <h1>Clean Blog</h1>
-
                         <hr class="small">
                         <span class="subheading">A Clean Blog Theme by Start Bootstrap</span>
                     </div>
@@ -118,69 +118,25 @@
         </div>
     </header>
 
-    <!-- Main Content -->
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="post-preview">
-                    <a href="post.html">
-                        <h2 class="post-title">
-                            Man must explore, and this is exploration at its greatest
-                        </h2>
-                        <h3 class="post-subtitle">
-                            Problems look mighty small from 150 miles up
-                        </h3>
-                    </a>
-                    <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 24, 2014</p>
-                </div>
-                <hr>
-                <div class="post-preview">
-                    <a href="post.html">
-                        <h2 class="post-title">
-                            I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.
-                        </h2>
-                    </a>
-                    <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 18, 2014</p>
-                </div>
-                <hr>
-                <div class="post-preview">
-                    <a href="post.html">
-                        <h2 class="post-title">
-                            Science has not yet mastered prophecy
-                        </h2>
-                        <h3 class="post-subtitle">
-                            We predict too much for the next year and yet far too little for the next ten.
-                        </h3>
-                    </a>
-                    <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on August 24, 2014</p>
-                </div>
-                <hr>
-                <div class="post-preview">
-                    <a href="post.html">
-                        <h2 class="post-title">
-                            Failure is not an option
-                        </h2>
-                        <h3 class="post-subtitle">
-                            Many say exploration is part of our destiny, but it’s actually our duty to future generations.
-                        </h3>
-                    </a>
-                    <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on July 8, 2014</p>
-                </div>
-                <hr>
-                <!-- Pager -->
-                <ul class="pager">
-                    <li class="next">
-                        <a href="#">Older Posts &rarr;</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
+<!--Create Category-->
 
-    <hr>
+<main>
+    <h2>FAQ Entries</h2>
+
+    <ul>
+        @foreach($entries as $entry)
+            <li>
+                {{ $entry->question }} - <a href="{{ route('faq-entries.edit', $entry->id) }}">Edit</a>
+            </li>
+        @endforeach
+    </ul>
+
+    <a href="{{ route('faq-entries.create') }}">Create New Entry</a>
+</main>
+
 
  <!-- Footer -->
-<footer>
+ <footer>
     <div class="container">
         <div class="row">
             <div class="col-lg-12 mb-4 text-center"> <!-- Added "text-center" class here -->
@@ -211,7 +167,7 @@
         </div>
         <div class="row">
             <div class="col-lg-12 text-center">
-                <p class="copyright text-muted">Copyright &copy; Cleaning Blog</p>
+                <p class="copyright text-muted">Copyright 2023 &copy; Cleaning Blog</p>
             </div>
         </div>
     </div>

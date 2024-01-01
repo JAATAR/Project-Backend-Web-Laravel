@@ -4,6 +4,8 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\FaqController;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,6 +52,10 @@ Route::get('/delete_post/{id}', [AdminController::class,'delete_post']);
 Route::get('/edit_page/{id}', [AdminController::class,'edit_page']);
 
 Route::post('/update_post/{id}', [AdminController::class,'update_post']);
+
+Route::get('/contacts', [ContactController::class, 'create'])->name('contacts.contact-us');
+
+Route::post('/contacts', [ContactController::class, 'store'])->name('contacts.store');
 
 
 
