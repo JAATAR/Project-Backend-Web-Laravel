@@ -85,7 +85,7 @@
 <div class="container d-flex justify-content-center align-items-center" style="min-height: 100vh;">
     <h3 class="title_deg" >Add Post</h3>
 
-    <form action="{{url()}}" method="POST" enctype="multipart/form-data" >
+    <form action="{{url('post_page')}}" method="POST" enctype="multipart/form-data" >
 
     @csrf
 

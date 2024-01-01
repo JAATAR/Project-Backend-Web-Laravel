@@ -109,10 +109,10 @@
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="site-heading">
 
-                        <h1>Clean Blog</h1>
+                        <h1>Cosmic Chronicle</h1>
 
                         <hr class="small">
-                        <span class="subheading">A Clean Blog Theme by Start Bootstrap</span>
+                        <span class="subheading">"Your Daily Dose of Inspiration and Information"</span>
                     </div>
                 </div>
             </div>
@@ -171,7 +171,7 @@
                 <!-- Pager -->
                 <ul class="pager">
                     <li class="next">
-                        <a href="#">Older Posts &rarr;</a>
+                        <a href="{{url('/show_post')}}">Older Posts &rarr;</a>
                     </li>
                 </ul>
             </div>
@@ -212,7 +212,7 @@
         </div>
         <div class="row">
             <div class="col-lg-12 text-center">
-                <p class="copyright text-muted">Copyright &copy; Cleaning Blog</p>
+                <p class="copyright text-muted">All 2024 rights reserved &copy; Design by Jaatar Soufian</p>
             </div>
         </div>
     </div>
