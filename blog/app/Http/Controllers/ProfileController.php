@@ -13,12 +13,12 @@ class ProfileController extends Controller
 {
     /**
      * Display the user's profile form.
-     */
-    public function edit(Request $request): View
+     */ public function edit(Request $request): View
     {
-        return view('profile.edit', [
-            'user' => $request->user(),
-        ]);
+        // fetch the data of current user
+        $user = $request->user();
+
+        return view('profile.edit', compact('user'));
     }
 
     /**
@@ -26,13 +26,49 @@ class ProfileController extends Controller
      */
     public function update(ProfileUpdateRequest $request): RedirectResponse
     {
-        $request->user()->fill($request->validated());
 
-        if ($request->user()->isDirty('email')) {
-            $request->user()->email_verified_at = null;
+        $user = $request->user();
+
+
+
+        $user->fill([
+            'username' => $request->input('name'),
+            'email' => $request->input('email'),
+            'birthday' => $request->input('birthday'),
+            'short_bio' => $request->input('short_bio'),
+
+
+        ]);
+
+
+        if ($request->hasFile('avatar')) {
+
+
+            // Get the original file name
+            $originalFileName = $request->file('avatar')->getClientOriginalName();
+
+            // Generate a unique file name
+            $tempFileName = pathinfo($originalFileName, PATHINFO_FILENAME) . '_' . time() . '.' . $request->file('avatar')->getClientOriginalExtension();
+
+            //replace spaces with an underscore
+            $avatarFileName = str_replace(' ', '_', $tempFileName);
+
+            // Store the file on the webserver with a custom name
+            $request->file('avatar')->storeAs('avatars', $avatarFileName, 'public');
+
+
+
+            // Save the file path in the database
+            $user->fill([
+                'avatar' => 'avatars/' . $avatarFileName
+            ]);
         }
 
-        $request->user()->save();
+
+
+
+
+        $user->save();
 
         return Redirect::route('profile.edit')->with('status', 'profile-updated');
     }
@@ -57,4 +93,5 @@ class ProfileController extends Controller
 
         return Redirect::to('/');
     }
+
 }

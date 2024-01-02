@@ -24,6 +24,28 @@
         </div>
 
         <div>
+            <div class="text-center mb-4">
+                <img src="{{ url('img blades/avatar-image.jpg') }}" alt="Avatar" class="img-fluid rounded-circle" id="avatar" style="width: 150px; height: 150px; max-width: 100%; max-height: 100%;">
+            </div>
+            <div class="custom-file">
+                <input type="file" class="custom-file-input" id="avatarInput" onchange="readURL(this)">
+                <label class="custom-file-label" for="avatarInput">Choose Avatar</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="birthday">Birthday</label>
+            <input type="date" class="form-control" id="birthday">
+        </div>
+<br>
+
+<div class="form-group">
+    <label for="aboutMe">About Me</label>
+    <textarea class="form-control" id="aboutMe" rows="3" placeholder="Write a short biography about yourself"></textarea>
+</div>
+        </div>
+
+        <div>
             <x-input-label for="email" :value="__('Email')" />
             <x-text-input id="email" name="email" type="email" class="mt-1 block w-full" :value="old('email', $user->email)" required autocomplete="username" />
             <x-input-error class="mt-2" :messages="$errors->get('email')" />
@@ -48,7 +70,7 @@
         </div>
 
         <div class="flex items-center gap-4">
-            <x-primary-button>{{ __('Save') }}</x-primary-button>
+            <x-primary-button>{{ __('Save Profile') }}</x-primary-button>
 
             @if (session('status') === 'profile-updated')
                 <p

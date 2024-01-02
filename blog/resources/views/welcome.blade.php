@@ -67,7 +67,7 @@
                     </li>
 
                     <li>
-                        <a href="{{url('/posts/create')}}">Recent Posts</a>
+                        <a href="{{route('posts.create')}}">Recent Posts</a>
                     </li>
                     <li>
                         <a href="{{url('/contacts')}}">Contact</a>

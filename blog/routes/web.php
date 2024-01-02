@@ -31,6 +31,11 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::post('/dashboard/search', [DashboardController::class, 'search'])->name('dashboard.search');
+    Route::get('/profile/{user}', [DashboardController::class, 'showProfile'])->name('profile.profile');
+
 });
 
 /*
@@ -58,9 +63,7 @@ Route::post('/update_post/{id}', [AdminController::class,'update_post']);
 
 */
 
-Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-Route::post('/dashboard/search', [DashboardController::class, 'search'])->name('dashboard.search');
-Route::get('/profile/{user}', [DashboardController::class, 'showProfile'])->name('profile.profile');
+
 
 Route::get('/contacts', [ContactController::class, 'create'])->name('contacts.contact-us');
 
