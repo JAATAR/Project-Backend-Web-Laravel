@@ -67,13 +67,13 @@
                     </li>
 
                     <li>
-                        <a href="{{route('posts.create')}}">Recent Posts</a>
+                        <a href="">Recent Posts</a>
                     </li>
                     <li>
                         <a href="{{url('/contacts')}}">Contact</a>
                     </li>
                     <li>
-                        <a href="">FAQ</a>
+                        <a href="{{url('/faq')}}">FAQ</a>
                     </li>
                     <li class=" bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
                         @if (Route::has('login'))

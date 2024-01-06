@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Welcome Clean Blog</title>
+        <title>Welcome Cosmic Chronicle</title>
 
 
 
@@ -75,7 +75,7 @@
                         <a href="#">Contact</a>
                     </li>
                     <li>
-                        <a href="">FAQ</a>
+                        <a href="{{url('/faq')}}">FAQ</a>
                     </li>
                     <li class=" bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
                         @if (Route::has('login'))
@@ -104,7 +104,7 @@
     <!-- Page Header -->
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-    <header class="intro-header" style="background-image: {{url('img blades/home-bg.jpg')}}">
+    <header class="intro-header" style="background-image: url('{{asset('img blades/home-bg.jpg')}}')">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -118,20 +118,71 @@
         </div>
     </header>
 
-<!--Create Category-->
-
+<!--FAQ Page-->
 <main>
-    <h2>FAQ Categories</h2>
+<h1>FAQ</h1>
+<div class="container mx-auto mt-8">
+    @foreach ($categories as $category)
+    <div class="bg-white shadow-md p-6 mb-6 rounded-md">
+        <div class="flex justify-between items-center mb-4">
+            <h2 class="text-xl font-semibold">{{ $category->categoryName }}</h2>
 
-    <ul>
-        @foreach($categories as $category)
-            <li>{{ $category->name }} - <a href="{{ route('faq-categories.edit', $category->id) }}">Edit</a></li>
-        @endforeach
-    </ul>
+            <!-- Only the admin can see this button -->
+            @auth
+            @if(auth()->user()->isAdmin)
+            <div>
+                <a href="{{ route('faq.create-item', ['category' => $category->categoryId]) }}"
+                    class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">Add Question & Answer</a>
 
-    <a href="{{ route('') }}">Create New Category</a>
+                <!-- Delete category button -->
+                <form action="{{ route('faq.delete-category', ['category' => $category->categoryId]) }}"
+                    method="POST" class="inline">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit"
+                        class="ml-4 px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600">Delete
+                        Category</button>
+                </form>
+            </div>
+            @endif
+            @endauth
+        </div>
+
+        <ul>
+            @forelse ($category->faqItems as $item)
+            <li class="mb-2">
+                <strong class="text-blue-500">{{ $item->question }}</strong><br>
+                {{ $item->answer }}
+            </li>
+            <!-- Delete question & answer button -->
+            @auth
+            @if(auth()->user()->isAdmin)
+            <form action="{{ route('faq.delete-item', ['item' => $item->itemId]) }}" method="POST" class="inline">
+                @csrf
+                @method('DELETE')
+                <button type="submit"
+                    class="ml-4 px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600">Delete Question &
+                    Answer</button>
+            </form>
+            @endif
+            @endauth
+            @empty
+            <li class="text-gray-500">No FAQs available for this category.</li>
+            @endforelse
+        </ul>
+    </div>
+    @endforeach
+
+    <!-- Only the admin can see this button -->
+    @auth
+    @if(auth()->user()->isAdmin)
+    <a href="{{ route('faq.create-category') }}"
+        class="px-4 py-2 bg-green-500 text-white rounded-md hover:bg-green-600">Add FAQ Category</a>
+    @endif
+    @endauth
+</div>
+
 </main>
-
 
  <!-- Footer -->
  <footer>

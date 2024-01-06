@@ -70,7 +70,7 @@
         </div>
 
         <div class="flex items-center gap-4">
-            <x-primary-button>{{ __('Save Profile') }}</x-primary-button>
+            <x-primary-button>{{ __('Save Profile') }} <a href="{{url()}}"></a></x-primary-button>
 
             @if (session('status') === 'profile-updated')
                 <p

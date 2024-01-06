@@ -121,25 +121,21 @@
 <!--Create Category-->
 
 <main>
-    <h2>Edit FAQ Entry</h2>
-
-    <form action="{{ route('faq-entries.update', $entry->id) }}" method="POST">
+    <form action="{{ route('faq.store-category') }}" method="POST">
         @csrf
-        @method('PUT')
-        <label for="category_id">Category:</label>
-        <select name="category_id" required>
-            @foreach($categories as $category)
-                <option value="{{ $category->id }}" @if($category->id === $entry->category_id) selected @endif>{{ $category->name }}</option>
-            @endforeach
-        </select>
-        <br>
-        <label for="question">Question:</label>
-        <input type="text" name="question" value="{{ $entry->question }}" required>
-        <br>
-        <label for="answer">Answer:</label>
-        <textarea name="answer" required>{{ $entry->answer }}</textarea>
-        <br>
-        <button type="submit">Update</button>
+
+        <div class="form-group">
+            <label for="categoryName">Category Name:</label>
+            <input type="text" name="categoryName" class="form-control" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Create Category</button>
+        @if(session('success'))
+        <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">
+            <strong class="font-bold">Success!</strong>
+            <span class="block sm:inline">{{ session('success') }}</span>
+        </div>
+        @endif
     </form>
 </main>
 

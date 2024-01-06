@@ -77,6 +77,28 @@ Route::middleware(['auth','admin'])->group(function(){
 
 });
 
+//FAQ Page
+Route::get('/faq', [FaqController::class, 'showFaqPage'])->name('faq.faqPage');
+
+//category create
+Route::get('/faq/create', [FaqController::class, 'createCategory'])->name('faq.create-category');
+
+//store category
+Route::post('/faq/create/store', [FaqController::class, 'storeCategory'])->name('faq.store-category');
+
+//item form
+Route::get('/faq/{category}/create-item', [FaqController::class, 'createItem'])->name('faq.create-item');
+
+//item store
+Route::post('/faq/{category}/create-item', [FaqController::class, 'storeItem'])->name('faq.store-item');
+
+//delete category
+Route::delete('/faq/category/{category}', [FaqController::class, 'deleteCategory'])->name('faq.delete-category');
+
+// Delete Item
+Route::delete('/faq/item/{item}', [FaqController::class, 'deleteItem'])->name('faq.delete-item');
+
+
 //create post
 Route::get('/posts/create', [PostController::class, 'showPostForm'])->name('posts.create');
 Route::get('/posts', [PostController::class, 'store'])->name('posts.store');
