@@ -81,7 +81,8 @@
                                 @auth
                                     <a href="{{ url('/dashboard') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Dashboard</a>
                                 @else
-                                    <a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log in</a>
+                                    <a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">
+                                    <img src="{{asset('img blades/login-Icon.png')}}" alt="" width="20" height="20">    Log in</a>
 
                                     @if (Route::has('register'))
                                         <a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a>
@@ -130,7 +131,7 @@
                             Problems look mighty small from 150 miles up
                         </h3>
                     </a>
-                    <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 24, 2014</p>
+                    <p class="post-meta">Posted by <a href="#">Stephen Hawking</a> on December 24, 2017</p>
                 </div>
                 <hr>
                 <div class="post-preview">
@@ -139,7 +140,7 @@
                             I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.
                         </h2>
                     </a>
-                    <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on September 18, 2014</p>
+                    <p class="post-meta">Posted by <a href="#">David Baltimore</a> on September 18, 2019</p>
                 </div>
                 <hr>
                 <div class="post-preview">
@@ -151,7 +152,7 @@
                             We predict too much for the next year and yet far too little for the next ten.
                         </h3>
                     </a>
-                    <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on August 24, 2014</p>
+                    <p class="post-meta">Posted by James D. Watson<a href="#"></a> on August 24, 2023</p>
                 </div>
                 <hr>
                 <div class="post-preview">
@@ -163,7 +164,7 @@
                             Many say exploration is part of our destiny, but it’s actually our duty to future generations.
                         </h3>
                     </a>
-                    <p class="post-meta">Posted by <a href="#">Start Bootstrap</a> on July 8, 2014</p>
+                    <p class="post-meta">Posted by <a href="#">Andrew Tate</a> on July 8, 2020</p>
                 </div>
                 <hr>
                 <!-- Pager -->

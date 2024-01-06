@@ -120,7 +120,9 @@
 
 <!--FAQ Page-->
 <main>
-<h1>FAQ</h1>
+    <div class="row">
+        <div class="col-lg-2 col-lg-offset-6 col-md-3 col-md-offset-">
+<h1 class="post-title">FAQ</h1>
 <div class="container mx-auto mt-8">
     @foreach ($categories as $category)
     <div class="bg-white shadow-md p-6 mb-6 rounded-md">
@@ -181,7 +183,8 @@
     @endif
     @endauth
 </div>
-
+        </div>
+    </div>
 </main>
 
  <!-- Footer -->
