@@ -73,23 +73,23 @@ Route::post('/contacts', [ContactController::class, 'store'])->name('contacts.st
 
 Route::middleware(['auth','admin'])->group(function(){
 
- //create post
- Route::get('/posts/create', [PostController::class, 'showPostForm'])->name('posts.create');
- Route::get('/posts', [PostController::class, 'store'])->name('posts.store');
-
- //edit post
- Route::get('/posts/{post}/edit', [PostController::class, 'editPost'])->name('posts.edit-post');
- Route::put('/posts/{post}', [PostController::class, 'updatePost'])->name('posts.update');
-
- //delete post
- Route::delete('post/{post}', [PostController::class, 'deletePost'])->name('posts.delete');
-
- //promote user to admin
- Route::post('/users/{user}/promote', [UserController::class, 'promoteUser'])->name('users.promote');
 
 
 });
 
+//create post
+Route::get('/posts/create', [PostController::class, 'showPostForm'])->name('posts.create');
+Route::get('/posts', [PostController::class, 'store'])->name('posts.store');
+
+//edit post
+Route::get('/posts/{post}/edit', [PostController::class, 'editPost'])->name('posts.edit');
+Route::put('/posts/{post}', [PostController::class, 'updatePost'])->name('posts.update');
+
+//delete post
+Route::delete('post/{post}', [PostController::class, 'deletePost'])->name('posts.delete');
+
+//promote user to admin
+Route::post('/users/{user}/promote', [UserController::class, 'promoteUser'])->name('users.promote');
 
 
 

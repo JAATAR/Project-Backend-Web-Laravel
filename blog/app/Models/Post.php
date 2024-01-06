@@ -11,10 +11,10 @@ class Post extends Model
     protected $primaryKey = 'postId';
     protected $fillable = [
 
-        'user_id',
+        'userId',
         'title',
-        'cover_image',
-        'content',
+        'image',
+
         'publishing_date'
     ];
 

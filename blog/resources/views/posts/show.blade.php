@@ -116,23 +116,20 @@
             </div>
         </div>
     </header>
+
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Alle Posts</div>
+                    <div class="card-header">{{ $post->title }}</div>
 
                     <div class="card-body">
-                        @if (session('status'))
-                            <div class="alert alert-success" role="alert">
-                                {{ session('status') }}
-                            </div>
-                        @endif
 
-                        @foreach($posts as $post)
-                            <h3><a href="{{ route('posts.show', $post->id) }}">{{ $post->title }}</a></h3>
-                            <img src="/uploads/{{ $post->image }}" style="width: 500px;" /><br>
                             <small>Gepost door <a href="{{ route('profile', $post->user->name) }}">{{ $post->user->name }}</a> op {{ $post->created_at->format('d/m/Y \o\m H:i') }}</small><br>
+    <br>
+                            {{ $post->message }}
+
+    <br><br>
                             @auth
                               @if($post->user_id == Auth::user()->id)
                                 <a href="{{ route('posts.edit', $post->id) }}">Edit Post</a>
@@ -142,16 +139,25 @@
                               <br>
                             @endauth
                             Post heeft {{ $post->likes()->count() }} likes
-                            <hr>
-                        @endforeach
 
+                            @auth
+                              @if(Auth::user()->is_admin)
+                                <br><br>
+                                <form method="post" action="{{ route('posts.destroy', $post->id) }}">
+                                  @csrf
+                                  @method('DELETE')
+                                  <input type="submit" value="DELETE POST" style="background-color: red;" onclick="return confirm('Are you sure you want to delete this post?');">
+                                </form>
+                              @endif
+                            @endauth
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-<!-- Footer -->
+
+ <!-- Footer -->
 <footer>
     <div class="container">
         <div class="row">

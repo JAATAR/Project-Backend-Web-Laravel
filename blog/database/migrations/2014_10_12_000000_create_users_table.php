@@ -20,6 +20,7 @@ $table->string('username')->default('default_username');
             $table->string('avatar')->nullable();
             $table->text('short_bio')->nullable();
             $table->boolean('isAdmin')->default(false);
+            $table->rememberToken();
             $table->timestamps();
         });
     }
