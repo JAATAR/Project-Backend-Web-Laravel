@@ -68,16 +68,16 @@
                             <a href="{{url('/about')}}"">About</a>
                         </li>
                         <li>
-                            <a href="{{url('post_page')}}">Add Post</a>
+                            <a href="">Add Post</a>
                         </li>
                         <li>
-                            <a href="{{url('/show_post')}}">Show Post</a>
+                            <a href="">Show Post</a>
                         </li>
                         <li>
                             <a href="{{url('/contacts')}}">Contact</a>
                         </li>
                         <li>
-                            <a href="">FAQ</a>
+                            <a href="{{url('/faq')}}">FAQ</a>
                         </li>
                         <li class=" bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
                             @if (Route::has('login'))

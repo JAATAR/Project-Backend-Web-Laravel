@@ -102,6 +102,7 @@ Route::delete('/faq/item/{item}', [FaqController::class, 'deleteItem'])->name('f
 //create post
 Route::get('/posts/create', [PostController::class, 'showPostForm'])->name('posts.create');
 Route::get('/posts', [PostController::class, 'store'])->name('posts.store');
+Route::get('/create', [PostController::class, 'show'])->name('posts.show');
 
 //edit post
 Route::get('/posts/{post}/edit', [PostController::class, 'editPost'])->name('posts.edit');

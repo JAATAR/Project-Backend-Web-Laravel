@@ -130,8 +130,7 @@
             <h2 class="text-xl font-semibold">{{ $category->categoryName }}</h2>
 
             <!-- Only the admin can see this button -->
-            @auth
-            @if(auth()->user()->isAdmin)
+
             <div>
                 <a href="{{ route('faq.create-item', ['category' => $category->categoryId]) }}"
                     class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600">Add Question & Answer</a>
@@ -146,8 +145,7 @@
                         Category</button>
                 </form>
             </div>
-            @endif
-            @endauth
+
         </div>
 
         <ul>

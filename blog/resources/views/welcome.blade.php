@@ -67,7 +67,10 @@
                     </li>
 
                     <li>
-                        <a href="">Recent Posts</a>
+                        <a href="{{url('/posts/create')}}">Add Post</a>
+                    </li>
+                    <li>
+                        <a href="{{url('/create')}}">Show Post</a>
                     </li>
                     <li>
                         <a href="{{url('/contacts')}}">Contact</a>
