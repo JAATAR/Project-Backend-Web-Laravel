@@ -126,7 +126,7 @@
 
     <h3>Mededelingen</h3>
     <p>
-        Als je terminalcommando's uitvoert, zorg ervoor dat je eerst naar het juiste pad navigeert.Anders zal de code van de website niet runnen.Het juiste pad is <strong>`cd ../Project-Backend-web-Laravel/blog` ,voordat je `php artisan serve` command uitvoert.</strong>  ,voordat je `php artisan serve` command uitvoert.
+        Als je terminalcommando's uitvoert, zorg ervoor dat je eerst naar het juiste pad navigeert.Anders zal de code van de website niet runnen.Het juiste pad is <strong>`cd ../Project-Backend-web-Laravel/blog` ,voordat je `php artisan serve` command uitvoert.</strong>.
     </p>
 <p> Je kunt de broncode van Cosmic Chronicle bekijken op [GitHub] <b>(https://github.com/JAATAR/Project-Backend-Web-Laravel)</b> . Voel u vrij om de repository te verkennen en bij te dragen.</p>
 

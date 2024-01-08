@@ -19,5 +19,6 @@ class PasswordResetTokensSeeder extends Seeder
             'token' => Str::random(60),
             'created_at' => now(),
         ]);
+        //Password Reset Tokens added
     }
 }
