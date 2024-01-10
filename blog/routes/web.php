@@ -4,7 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\DashboardController;
 
@@ -65,9 +65,9 @@ Route::post('/update_post/{id}', [AdminController::class,'update_post']);
 
 
 
-Route::get('/contacts', [ContactController::class, 'create'])->name('contacts.contact-us');
+Route::get('/contacts', [ContactUsController::class, 'create'])->name('contacts.contact-us');
 
-Route::post('/contacts', [ContactController::class, 'store'])->name('contacts.store');
+Route::post('/contacts', [ContactUsController::class, 'store'])->name('contacts.store');
 
 
 

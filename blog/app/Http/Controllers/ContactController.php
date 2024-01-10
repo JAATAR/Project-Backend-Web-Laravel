@@ -25,7 +25,8 @@ class ContactController extends Controller
             'bericht' => 'required',
         ]);
 
-        Mail::to('info.cleaningblog@gmail.com')->send(new ContactMail($validatedData));
+        $mail = "5c5cc109a5-15482e+1@inbox.mailtrap.io";
+        Mail::to($mail)->send(new ContactMail($validatedData));
 
         return back()->with('success', 'Your message is send.');
     }
