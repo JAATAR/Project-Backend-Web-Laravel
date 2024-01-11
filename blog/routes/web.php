@@ -7,7 +7,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\DashboardController;
-
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -38,30 +38,14 @@ Route::middleware('auth')->group(function () {
 
 });
 
-/*
+Route::get('/post_page',[HomeController::class, 'post_page']);
+Route::post('/add_post',[HomeController::class, 'add_post']);
+Route::get('/show_post',[HomeController::class, 'show_post']);
+Route::get('/delete_post/{id}',[HomeController::class, 'delete_post']);
+Route::get('/edit_page/{id}',[HomeController::class, 'edit_page']);
+Route::post('/Update_post/{id}',[HomeController::class, 'update_post']);
 
-Route::get('post', [PostController::class,'post'])->
-middleware([ 'auth','admin']);
 
-Route::get('/post_details/{id}', [PostController::class,'post_details']);
-
-Route::get('/create_post', [PostController::class,'create_post']) ->middleware('auth');
-
-Route::post('/user_post', [PostController::class,'user_post']);
-
-Route::get('/post_page', [AdminController::class,'post_page']);
-
-Route::post('/add_post', [AdminController::class,'add_post']);
-
-Route::get('/show_post', [AdminController::class,'show_post']);
-
-Route::get('/delete_post/{id}', [AdminController::class,'delete_post']);
-
-Route::get('/edit_page/{id}', [AdminController::class,'edit_page']);
-
-Route::post('/update_post/{id}', [AdminController::class,'update_post']);
-
-*/
 
 
 
@@ -99,17 +83,6 @@ Route::delete('/faq/category/{category}', [FaqController::class, 'deleteCategory
 Route::delete('/faq/item/{item}', [FaqController::class, 'deleteItem'])->name('faq.delete-item');
 
 
-//create post
-Route::get('/posts/create', [PostController::class, 'showPostForm'])->name('posts.create');
-Route::get('/posts', [PostController::class, 'store'])->name('posts.store');
-Route::get('/create', [PostController::class, 'show'])->name('posts.show');
-
-//edit post
-Route::get('/posts/{post}/edit', [PostController::class, 'editPost'])->name('posts.edit');
-Route::put('/posts/{post}', [PostController::class, 'updatePost'])->name('posts.update');
-
-//delete post
-Route::delete('post/{post}', [PostController::class, 'deletePost'])->name('posts.delete');
 
 //promote user to admin
 Route::post('/users/{user}/promote', [UserController::class, 'promoteUser'])->name('users.promote');

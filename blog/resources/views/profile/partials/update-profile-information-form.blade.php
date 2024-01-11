@@ -67,7 +67,7 @@
                     </li>
 
                     <li>
-                        <a href="">Recent Posts</a>
+                        <a href="{{url('/show_post')}}">Recent Posts</a>
                     </li>
                     <li>
                         <a href="{{url('/contacts')}}">Contact</a>

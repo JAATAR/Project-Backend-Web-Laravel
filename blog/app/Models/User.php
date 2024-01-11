@@ -17,17 +17,8 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
-    protected $primaryKey = 'userId';
-    protected $fillable = [
 
-        'username',
-        'email',
-        'password',
-        'birthday',
-        'avatar',
-        'short_bio',
-        'isAdmin',
-    ];
+
 
 
     /**
@@ -50,13 +41,6 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
-    public function posts()
-    {
-return $this->hasMany(Post::class, 'userId','userId');
-    }
 
-    public function likes(){
-        return $this->hasMany('App\Models\Like');
-      }
 
 }

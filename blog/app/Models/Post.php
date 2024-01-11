@@ -8,15 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
     use HasFactory;
-    protected $primaryKey = 'postId';
-    protected $fillable = [
 
-        'userId',
-        'title',
-        'image',
-
-        'publishing_date'
-    ];
 
     public function user()
     {
