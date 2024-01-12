@@ -49,13 +49,13 @@
                                 <a href="{{url('/about')}}"">About</a>
                             </li>
                             <li>
-                                <a href="#">Sample Post</a>
+                                <a href="{{url('/show_post')}}">Recent Posts</a>
                             </li>
                             <li>
-                                <a href="#">Contact</a>
+                                <a href="{{url('/contacts')}}">Contact</a>
                             </li>
                             <li>
-                                <a href="">FAQ</a>
+                                <a href="{{url('/faq')}}">FAQ</a>
                             </li>
                         </ul>
 

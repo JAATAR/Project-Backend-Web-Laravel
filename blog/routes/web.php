@@ -32,10 +32,6 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-    Route::post('/dashboard/search', [DashboardController::class, 'search'])->name('dashboard.search');
-    Route::get('/profile/{user}', [DashboardController::class, 'showProfile'])->name('profile.profile');
-
 });
 
 Route::get('/post_page',[HomeController::class, 'post_page']);
