@@ -12,8 +12,11 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('faq_categories', function (Blueprint $table) {
-            $table->id('categoryId');
-            $table->string('categoryName');
+            $table->id('Id');
+            $table->string('CategoryId')->nullable();
+            $table->string('title')->nullable();
+            $table->string('question')->nullable();
+            $table->text('answer')->nullable();
             $table->timestamps();
         });
     }

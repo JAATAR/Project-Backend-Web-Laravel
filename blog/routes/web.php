@@ -6,7 +6,6 @@ use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\FaqController;
-use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
@@ -33,6 +32,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
 });
+//Latest News
 
 Route::get('/post_page',[HomeController::class, 'post_page']);
 Route::post('/add_post',[HomeController::class, 'add_post']);
@@ -43,7 +43,7 @@ Route::post('/Update_post/{id}',[HomeController::class, 'update_post']);
 
 
 
-
+//Contact Form
 
 Route::get('/contacts', [ContactUsController::class, 'create'])->name('contacts.contact-us');
 
@@ -58,25 +58,13 @@ Route::middleware(['auth','admin'])->group(function(){
 });
 
 //FAQ Page
-Route::get('/faq', [FaqController::class, 'showFaqPage'])->name('faq.faqPage');
+Route::get('/faq', [FaqController::class, 'faq_page']);
+Route::post('/add_category', [FaqController::class, 'add_category']);
+Route::get('/show_faq',[FaqController::class, 'show_faq']);
+Route::get('/delete_faq/{id}',[FaqController::class, 'delete_faq']);
+Route::get('/edit_faq/{id}',[FaqController::class, 'edit_faq']);
+Route::post('/update_faq/{id}',[FaqController::class, 'update_faq']);
 
-//category create
-Route::get('/faq/create', [FaqController::class, 'createCategory'])->name('faq.create-category');
-
-//store category
-Route::post('/faq/create/store', [FaqController::class, 'storeCategory'])->name('faq.store-category');
-
-//item form
-Route::get('/faq/{category}/create-item', [FaqController::class, 'createItem'])->name('faq.create-item');
-
-//item store
-Route::post('/faq/{category}/create-item', [FaqController::class, 'storeItem'])->name('faq.store-item');
-
-//delete category
-Route::delete('/faq/category/{category}', [FaqController::class, 'deleteCategory'])->name('faq.delete-category');
-
-// Delete Item
-Route::delete('/faq/item/{item}', [FaqController::class, 'deleteItem'])->name('faq.delete-item');
 
 
 
