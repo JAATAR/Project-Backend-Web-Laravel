@@ -121,17 +121,21 @@ padding: 30px;
                     <li>
                         <a href="{{url('/about')}}"">About</a>
                     </li>
+
                     <li>
-                        <a href="{{url('post_page')}}">Add Post</a>
+                        <a href="{{url('/post_page')}}">Add Post</a>
                     </li>
                     <li>
                         <a href="{{url('/show_post')}}">Show Post</a>
                     </li>
                     <li>
-                        <a href="#">Contact</a>
+                        <a href="{{url('/contacts')}}">Contact</a>
                     </li>
                     <li>
-                        <a href="{{url('/faq')}}">FAQ</a>
+                        <a href="{{url('/faq')}}">Ask Question</a>
+                    </li>
+                    <li>
+                        <a href="{{url('/show_faq')}}">FAQ</a>
                     </li>
                     <li class=" bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
                         @if (Route::has('login'))
@@ -139,7 +143,8 @@ padding: 30px;
                                 @auth
                                     <a href="{{ url('/dashboard') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Dashboard</a>
                                 @else
-                                    <a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log in</a>
+                                    <a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">
+                                    <img src="{{asset('img blades/login-Icon.png')}}" alt="" width="20" height="20">    Log in</a>
 
                                     @if (Route::has('register'))
                                         <a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a>
@@ -150,6 +155,7 @@ padding: 30px;
 
                 </li>
                 </ul>
+
 
             </div>
             <!-- /.navbar-collapse -->
@@ -247,7 +253,7 @@ padding: 30px;
         </div>
         <div class="row">
             <div class="col-lg-12 text-center">
-                <p class="copyright text-muted">Copyright 2023 &copy; Cleaning Blog</p>
+                <p class="copyright text-muted">Copyright 2024 &copy; Design By Jaatar Soufian</p>
             </div>
         </div>
     </div>

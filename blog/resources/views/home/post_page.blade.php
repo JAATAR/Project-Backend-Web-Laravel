@@ -85,6 +85,10 @@ label
                     <li>
                         <a href="{{url('/about')}}"">About</a>
                     </li>
+
+                    <li>
+                        <a href="{{url('/post_page')}}">Add Post</a>
+                    </li>
                     <li>
                         <a href="{{url('/show_post')}}">Show Post</a>
                     </li>
@@ -92,7 +96,10 @@ label
                         <a href="{{url('/contacts')}}">Contact</a>
                     </li>
                     <li>
-                        <a href="{{url('/faq')}}">FAQ</a>
+                        <a href="{{url('/faq')}}">Ask Question</a>
+                    </li>
+                    <li>
+                        <a href="{{url('/show_faq')}}">FAQ</a>
                     </li>
                     <li class=" bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
                         @if (Route::has('login'))
@@ -112,6 +119,7 @@ label
 
                 </li>
                 </ul>
+
 
             </div>
             <!-- /.navbar-collapse -->

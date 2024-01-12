@@ -67,8 +67,9 @@
                     <li>
                         <a href="{{url('/about')}}"">About</a>
                     </li>
+
                     <li>
-                        <a href="{{url('post_page')}}">Add Post</a>
+                        <a href="{{url('/post_page')}}">Add Post</a>
                     </li>
                     <li>
                         <a href="{{url('/show_post')}}">Show Post</a>
@@ -77,7 +78,10 @@
                         <a href="{{url('/contacts')}}">Contact</a>
                     </li>
                     <li>
-                        <a href="">FAQ</a>
+                        <a href="{{url('/faq')}}">Ask Question</a>
+                    </li>
+                    <li>
+                        <a href="{{url('/show_faq')}}">FAQ</a>
                     </li>
                     <li class=" bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
                         @if (Route::has('login'))
@@ -85,7 +89,8 @@
                                 @auth
                                     <a href="{{ url('/dashboard') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Dashboard</a>
                                 @else
-                                    <a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log in</a>
+                                    <a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">
+                                    <img src="{{asset('img blades/login-Icon.png')}}" alt="" width="20" height="20">    Log in</a>
 
                                     @if (Route::has('register'))
                                         <a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a>

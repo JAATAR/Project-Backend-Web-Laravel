@@ -12,7 +12,7 @@
     <p>{{ $messageContent }}</p>
 
     <p>Best Regards</p>
-    <p style="color: blue;">Cleaning Blog</p>
+    <p style="color: blue;">Cosmic Chronicle Admin</p>
 </body>
 
 </html>
