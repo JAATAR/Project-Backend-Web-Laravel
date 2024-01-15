@@ -2,11 +2,12 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PostController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AdminController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -69,7 +70,8 @@ Route::post('/update_faq/{id}',[FaqController::class, 'update_faq']);
 
 
 //promote user to admin
-Route::post('/users/{user}/promote', [UserController::class, 'promoteUser'])->name('users.promote');
+Route::get('/admin/promote',[AdminController::class, 'showPromotion'])->name('admin.promote');
+Route::post('/admin/promote',[AdminController::class, 'submitPromotion'])->name('admin.promote.submit');
 
 
 

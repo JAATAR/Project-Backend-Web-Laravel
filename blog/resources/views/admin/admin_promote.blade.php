@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Welcome Cosmic Chronicle</title>
+        <title>Promote User to Admin Cosmic Chronicle</title>
 
 
 
@@ -82,7 +82,7 @@
                         <a href="{{url('/show_faq')}}">FAQ</a>
                     </li>
                     <li>
-                        <a href="{{url('/admin/promote')}}">Promote to Admin</a>
+                        <a href="">Promote to Admin</a>
 
                     </li>
                     <li class=" bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
@@ -128,65 +128,31 @@
         </div>
     </header>
 
-    <!-- Main Content -->
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="post-preview">
-                    <a href="{{url('/show_post')}}">
-                        <h2 class="post-title">
-                            Man must explore, and this is exploration at its greatest
-                        </h2>
-                        <h3 class="post-subtitle">
-                            Problems look mighty small from 150 miles up
-                        </h3>
-                    </a>
-                    <p class="post-meta">Posted by <b>Stephen Hawking</b> Published on December 24, 2017</p>
+    <!--  Promote user to Admin -->
+<main>
+    <div class="card shadow p-4" style="max-width: 400px; margin: 10px auto;">
+        <div class="card-body">
+            <h5 class="card-title">Promote to Admin</h5>
+            <p class="card-text">Click the button below to promote.</p>
+            <p class="card-text">Select a user from the list below and promote them to admin.</p>
+
+            <form method="POST" action="{{ route('admin.promote.submit') }}">
+                @csrf
+                <div class="mb-3">
+                    <label for="user_id" class="form-label">Select User:</label>
+                    <select name="user_id" id="user_id" class="form-select">
+                        @foreach($users as $user)
+                            <option value="{{ $user->id }}">{{ $user->name }}</option>
+                        @endforeach
+                    </select>
                 </div>
-                <hr>
-                <div class="post-preview">
-                    <a href="{{url('/show_post')}}">
-                        <h2 class="post-title">
-                            I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.
-                        </h2>
-                    </a>
-                    <p class="post-meta">Posted by <b>David Baltimore</b> on September 18, 2019</p>
-                </div>
-                <hr>
-                <div class="post-preview">
-                    <a href="{{url('/show_post')}}">
-                        <h2 class="post-title">
-                            Science has not yet mastered prophecy
-                        </h2>
-                        <h3 class="post-subtitle">
-                            We predict too much for the next year and yet far too little for the next ten.
-                        </h3>
-                    </a>
-                    <p class="post-meta">Posted by <b>James D. Watson</b> on August 24, 2023</p>
-                </div>
-                <hr>
-                <div class="post-preview">
-                    <a href="{{url('/show_post')}}">
-                        <h2 class="post-title">
-                            Failure is not an option
-                        </h2>
-                        <h3 class="post-subtitle">
-                            Many say exploration is part of our destiny, but it’s actually our duty to future generations.
-                        </h3>
-                    </a>
-                    <p class="post-meta">Posted by <b>Andrew Tate</b> on July 8, 2020</p>
-                </div>
-                <hr>
-                <!-- Pager -->
-                <ul class="pager">
-                    <li class="next">
-                        <a href="{{url('/show_post')}}">Older Posts &rarr;</a>
-                    </li>
-                </ul>
-            </div>
+
+                <button type="submit" class="btn btn-primary" onclick="return confirm('Are you sure you want to promote this member as admin?')">Promote to Admin</button>
+            </form>
         </div>
     </div>
 
+</main>
     <hr>
 
  <!-- Footer -->
