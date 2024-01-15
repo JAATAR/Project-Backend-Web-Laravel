@@ -38,7 +38,7 @@ public function delete_faq($id)
 
     $faq_category = FaqCategory::find($id);
     $faq_category->delete();
-    return redirect()->back()->with('message', 'Question deleted successfully');
+    return redirect()->back()->with('message', 'FAQ item deleted successfully');
 }
 public function edit_faq($id)
 {

@@ -165,9 +165,15 @@ label
     <form action="{{url('add_category')}}" method="POST" enctype="multipart/form-data">
     @csrf
 <div class="div_center">
-<label for="">Category Title</label>
+<label for="">Create FAQ</label>
 <input type="text" name="title" >
 
+<label for="categoryFilter" class="form-label">Filter by Category:</label>
+<select class="form-control" id="categoryFilter" name="category">
+    <option value="">All Categories</option>
+
+</select>
+<button type="submit" class="btn btn-primary mt-2">Filter</button>
 </div>
 <div class="div_center">
 <label for="">Question</label>
@@ -177,7 +183,7 @@ label
 </div>
 <div class="div_center">
     <label for="">Answer</label>
-    <input type="text" name="question">
+    <textarea class="form-control" id="answer" name="answer" rows="4" required></textarea>
 
 
     </div>

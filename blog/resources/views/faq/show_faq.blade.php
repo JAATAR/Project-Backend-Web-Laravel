@@ -197,21 +197,22 @@ padding: 30px;
 
             <!-- Category 1: General Questions -->
             <div class="faq-category">
+                <div class="mb-3">
                 <h2>{{$faq_category->title}}</h2>
                 <div class="faq-item">
                     <h3>{{$faq_category->question}}</h3>
                     <p>{{$faq_category->answer}}</p>
                 </div>
+            </div>
 
 
 
-
-                <td>
-                    <a href="{{url('delete_faq',$faq_category->id )}}" class="btn btn-danger" onclick="confirmation(event)">Delete</a>
-                  </td>
-                  <td>
+                <button>
+                    <a href="{{url('delete_faq',$faq_category->id )}}" class="btn btn-danger" onclick="confirm('Are you sure you want to delete this FAQ item')">Delete</a>
+                </button>
+                  <button>
                     <a href="{{url('/edit_faq',$faq_category->id)}}" class="btn btn-success">Edit</a>
-                </td>
+                </button>
 
             </div>
 
